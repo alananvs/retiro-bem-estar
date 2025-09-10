@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Retiro Bem-Estar</title>
+    <link rel="stylesheet" href="styles/styles-css.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="retiro-bem-estar.html" class="logo">🌿 Retiro Bem-Estar</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="retiro-bem-estar.html" class="active">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Seção de Login -->
+                <div class="auth-section" id="loginSection">
+                    <div class="auth-header">
+                        <h1>Bem-vindo de volta!</h1>
+                        <p>Acesse sua conta para gerenciar suas reservas e acompanhar sua jornada de transformação</p>
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Senha:</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required placeholder="Sua senha">
+                                <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                    👁️
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember" id="remember">
+                                Lembrar de mim
+                            </label>
+                            <a href="#" onclick="showForgotPassword()" class="forgot-link">Esqueci minha senha</a>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 300px; align-self: anchor-center;">Entrar na Minha Conta</button>
+                        
+                        <div id="loginSuccess" class="success-message" style="display: none;">
+                            ✅ Login realizado com sucesso! Redirecionando...
+                        </div>
+
+                        <div id="loginError" class="error-message" style="display: none;">
+                            ❌ Email ou senha incorretos. Tente novamente.
+                        </div>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>ou</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="btn btn-social google-btn" onclick="loginWithGoogle()">
+                            Continuar com Google
+                        </button>
+                        <button class="btn btn-social facebook-btn" onclick="loginWithFacebook()">
+                            Continuar com Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Ainda não tem uma conta? <a href="#" onclick="showRegister()" class="switch-link">Criar conta gratuita</a></p>
+                    </div>
+                </div>
+
+                <!-- Seção de Registro -->
+                <div class="auth-section" id="registerSection" style="display: none;">
+                    <div class="auth-header">
+                        <h1>Crie sua conta</h1>
+                        <p>Junte-se à nossa comunidade e comece sua jornada de transformação</p>
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleRegister(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nome:</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Sobrenome:</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Seu sobrenome">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerEmail">E-mail:</label>
+                            <input type="email" id="registerEmail" name="email" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone/WhatsApp:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(11) 99999-9999">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">Data de Nascimento:</label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerPassword">Senha:</label>
+                            <div class="password-input">
+                                <input type="password" id="registerPassword" name="password" required placeholder="Crie uma senha forte">
+                                <button type="button" class="password-toggle" onclick="togglePassword('registerPassword')">
+                                    👁️
+                                </button>
+                            </div>
+                            <div class="password-strength" id="passwordStrength"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar Senha:</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Digite a senha novamente">
+                                <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                    👁️
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests">Como nos conheceu?</label>
+                            <select id="interests" name="interests">
+                                <option value="">Selecione uma opção</option>
+                                <option value="google">Pesquisa no Google</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="amigos">Indicação de amigos</option>
+                                <option value="site">Site de turismo</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter" checked>
+                                Quero receber novidades e dicas de bem-estar
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" id="terms" required>
+                                Concordo com os <a href="#" onclick="showTerms()">Termos de Uso</a> e <a href="#" onclick="showPrivacy()">Política de Privacidade</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary auth-btn">Criar Minha Conta</button>
+                        
+                        <div id="registerSuccess" class="success-message" style="display: none;">
+                            ✅ Conta criada com sucesso! Bem-vindo à nossa comunidade!
+                        </div>
+
+                        <div id="registerError" class="error-message" style="display: none;">
+                            ❌ Erro ao criar conta. Verifique os dados e tente novamente.
+                        </div>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Já tem uma conta? <a href="#" onclick="showLogin()" class="switch-link">Fazer login</a></p>
+                    </div>
+                </div>
+
+                <!-- Seção de Recuperação de Senha -->
+                <div class="auth-section" id="forgotSection" style="display: none;">
+                    <div class="auth-header">
+                        <h1>Recuperar Senha</h1>
+                        <p>Digite seu e-mail e enviaremos instruções para criar uma nova senha</p>
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleForgotPassword(event)">
+                        <div class="form-group">
+                            <label for="forgotEmail">E-mail:</label>
+                            <input type="email" id="forgotEmail" name="email" required placeholder="seu@email.com">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary auth-btn">Enviar Instruções</button>
+                        
+                        <div id="forgotSuccess" class="success-message" style="display: none;">
+                            ✅ Instruções enviadas para seu e-mail! Verifique sua caixa de entrada.
+                        </div>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Lembrou da senha? <a href="#" onclick="showLogin()" class="switch-link">Fazer login</a></p>
+                    </div>
+                </div>
+
+                <!-- Área do Usuário Logado -->
+                <div class="user-area" id="userArea" style="display: none;">
+                    <div class="user-header">
+                        <div class="user-avatar">👤</div>
+                        <div class="user-info">
+                            <h2 id="userName">Olá, Usuario!</h2>
+                            <p id="userEmail">usuario@email.com</p>
+                        </div>
+                        <button class="btn btn-outline" onclick="handleLogout()">Sair</button>
+                    </div>
+
+                    <div class="user-dashboard">
+                        <div class="dashboard-section">
+                            <h3>📅 Minhas Reservas</h3>
+                            <div id="userReservations" class="reservations-list">
+                                <div class="no-reservations">
+                                    <p>Você ainda não tem reservas.</p>
+                                    <a href="pacotes.html" class="btn btn-primary">Explorar Retiros</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-section">
+                            <h3>🎯 Meu Progresso</h3>
+                            <div class="progress-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">0</span>
+                                    <span class="stat-label">Retiros Concluídos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">0</span>
+                                    <span class="stat-label">Novos Amigos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">0</span>
+                                    <span class="stat-label">Habilidades Aprendidas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-section">
+                            <h3>🌟 Próximos Passos</h3>
+                            <div class="next-steps">
+                                <div class="step-item">
+                                    <h4>1. Complete seu perfil</h4>
+                                    <p>Adicione mais informações para personalizarmos sua experiência</p>
+                                    <button class="btn btn-outline btn-sm" onclick="showProfile()">Completar Perfil</button>
+                                </div>
+                                <div class="step-item">
+                                    <h4>2. Escolha seu primeiro retiro</h4>
+                                    <p>Explore nossos pacotes e encontre o ideal para você</p>
+                                    <a href="pacotes.html" class="btn btn-primary btn-sm">Ver Pacotes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar com Benefícios -->
+                <div class="auth-sidebar">
+                    <div class="benefits-section">
+                        <h3>✨ Benefícios da Conta</h3>
+                        <ul class="benefits-list">
+                            <li>🎯 Reservas rápidas e fáceis</li>
+                            <li>📱 Acesso ao app móvel exclusivo</li>
+                            <li>💬 Grupo privado no WhatsApp</li>
+                            <li>📚 Biblioteca de conteúdos premium</li>
+                            <li>🎁 Descontos especiais para membros</li>
+                            <li>📧 Newsletter personalizada</li>
+                            <li>👥 Conexão com outros participantes</li>
+                            <li>📈 Acompanhamento do seu progresso</li>
+                        </ul>
+                    </div>
+
+                    <div class="testimonial-sidebar">
+                        <h4>💬 O que nossos membros dizem:</h4>
+                        <blockquote>
+                            "Ter uma conta no Retiro Bem-Estar me permitiu acompanhar toda minha evolução. É incrível ver o quanto cresci!"
+                            <cite>- Maria, 68 anos</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="security-info">
+                        <h4>🔒 Sua segurança em primeiro lugar</h4>
+                        <p>Utilizamos criptografia de ponta para proteger seus dados. Suas informações pessoais estão seguras conosco.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌿 Retiro Bem-Estar</h3>
+                    <p>Transformando vidas através da conexão com a natureza e consigo mesmo.</p>
+                    <p>Uma nova perspectiva sobre a aposentadoria.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <a href="sobre.html">Nossa História</a>
+                    <a href="pacotes.html">Pacotes</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#blog">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>contato@retirobemestar.com.br</p>
+                    <p>(61) 99408-8445</p>
+                    <p>Feira de Santana, BA</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Siga-nos</h3>
+                    <a href="#facebook">Facebook</a>
+                    <a href="#instagram">Instagram</a>
+                    <a href="#youtube">YouTube</a>
+                    <a href="#newsletter">Newsletter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Retiro Bem-Estar. Todos os direitos reservados. | Desenvolvido por Alana Neves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app/script-js.js"></script>
+</body>
+</html>

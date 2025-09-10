@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Pacotes - Retiro Bem-Estar</title>
+    <link rel="stylesheet" href="styles/styles-css.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="retiro-bem-estar.html" class="logo">🌿 Retiro Bem-Estar</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="retiro-bem-estar.html" class="active">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Escolha Sua Jornada de Transformação</h1>
+                <p class="page-subtitle">Três experiências únicas desenhadas para diferentes momentos da sua jornada pessoal</p>
+            </div>
+
+            <!-- Comparativo dos Pacotes -->
+            <div class="packages-comparison">
+                <h2>Compare Nossos Retiros</h2>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="feature-column">
+                            <h3>Características</h3>
+                        </div>
+                        <div class="package-column despertar">
+                            <div class="package-icon">🌅</div>
+                            <h3>Despertar</h3>
+                            <p class="duration">3 dias</p>
+                            <p class="price">R$ 890</p>
+                        </div>
+                        <div class="package-column conexao">
+                            <div class="package-icon">🌲</div>
+                            <h3>Conexão</h3>
+                            <p class="duration">7 dias</p>
+                            <p class="price">R$ 1.890</p>
+                        </div>
+                        <div class="package-column transformacao">
+                            <div class="package-icon">⛰️</div>
+                            <h3>Transformação</h3>
+                            <p class="duration">14 dias</p>
+                            <p class="price">R$ 3.490</p>
+                            <span class="premium-badge">PREMIUM</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-features">
+                        <div class="feature-row">
+                            <div class="feature-name">Máx. Participantes</div>
+                            <div class="feature-value">15 pessoas</div>
+                            <div class="feature-value">12 pessoas</div>
+                            <div class="feature-value">8 pessoas</div>
+                        </div>
+                        
+                        <div class="feature-row">
+                            <div class="feature-name">Acomodação</div>
+                            <div class="feature-value">Quarto compartilhado</div>
+                            <div class="feature-value">Quarto individual ou compartilhado</div>
+                            <div class="feature-value">Suíte individual premium</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Refeições</div>
+                            <div class="feature-value">✅ Todas incluídas</div>
+                            <div class="feature-value">✅ Todas incluídas</div>
+                            <div class="feature-value">✅ Gastronomia medicinal</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Atividades Físicas</div>
+                            <div class="feature-value">Leves e adaptadas</div>
+                            <div class="feature-value">Moderadas a intensas</div>
+                            <div class="feature-value">Desafiadoras e expedições</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Trilhas</div>
+                            <div class="feature-value">Caminhadas suaves (1-3km)</div>
+                            <div class="feature-value">Trilhas médias (5-10km)</div>
+                            <div class="feature-value">Expedições (até 15km)</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Yoga e Meditação</div>
+                            <div class="feature-value">Básico para iniciantes</div>
+                            <div class="feature-value">Intermediário</div>
+                            <div class="feature-value">Avançado + retiro silêncio</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Oficinas Criativas</div>
+                            <div class="feature-value">2 modalidades</div>
+                            <div class="feature-value">6 modalidades</div>
+                            <div class="feature-value">8+ modalidades</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Permacultura</div>
+                            <div class="feature-value">Introdução básica</div>
+                            <div class="feature-value">Prática intermediária</div>
+                            <div class="feature-value">Projeto completo personalizado</div>
+                        </div>
+
+                        <!-- <div class="feature-row">
+                            <div class="feature-name">Coaching Individual</div>
+                            <div class="feature-value">❌</div>
+                            <div class="feature-value">1 sessão</div>
+                            <div class="feature-value">6 sessões</div>
+                        </div> -->
+
+                        <div class="feature-row">
+                            <div class="feature-name">Suporte Pós-Retiro</div>
+                            <div class="feature-value">Grupo online por 1 mês</div>
+                            <div class="feature-value">Grupo online por 3 meses</div>
+                            <div class="feature-value">Mentoria vitalícia</div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature-name">Materiais Incluídos</div>
+                            <div class="feature-value">Kit básico</div>
+                            <div class="feature-value">Kit completo</div>
+                            <div class="feature-value">Kit premium + biblioteca</div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-actions">
+                        <div class="action-column"></div>
+                        <div class="action-column">
+                            <a href="despertar.html" class="cta-button">Saber mais</a>
+                        </div>
+                        <div class="action-column">
+                            <a href="conexao.html" class="cta-button">Saber mais</a>
+                        </div>
+                        <div class="action-column">
+                            <a href="transformacao.html" class="cta-button">Saber mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Pagamentos -->
+            <div class="payment-section">
+                <h2>💳 Formas de Pagamento</h2>
+                <div class="payment-info">
+                    <div class="payment-methods">
+                        <h3>Aceitamos:</h3>
+                        <div class="payment-grid">
+                            <div class="payment-method">
+                                <div class="payment-icon">💳</div>
+                                <h4>Cartão de Crédito</h4>
+                                <ul>
+                                    <li>Visa, Mastercard, Elo</li>
+                                    <li>Parcelamento sem juros:</li>
+                                    <li>• Despertar: até 3x</li>
+                                    <li>• Conexão: até 6x</li>
+                                    <li>• Transformação: até 10x</li>
+                                </ul>
+                            </div>
+
+                            <div class="payment-method">
+                                <div class="payment-icon">🏦</div>
+                                <h4>Transferência/PIX</h4>
+                                <ul>
+                                    <li>PIX disponível 24h</li>
+                                    <li>TED/DOC em dias úteis</li>
+                                    <li>Confirmação automática</li>
+                                    <li>Desconto especial à vista</li>
+                                </ul>
+                            </div>
+
+                            <div class="payment-method">
+                                <div class="payment-icon">📱</div>
+                                <h4>Carteiras Digitais</h4>
+                                <ul>
+                                    <li>PayPal</li>
+                                    <li>PicPay</li>
+                                    <li>Mercado Pago</li>
+                                    <li>Processamento seguro</li>
+                                </ul>
+                            </div>
+
+                            <div class="payment-method">
+                                <div class="payment-icon">💰</div>
+                                <h4>Boleto Bancário</h4>
+                                <ul>
+                                    <li>Vencimento em 3 dias úteis</li>
+                                    <li>Pagável em qualquer banco</li>
+                                    <li>Internet banking</li>
+                                    <li>Casas lotéricas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discount-offers">
+                        <h3>🎁 Descontos Especiais</h3>
+                        <div class="discount-list">
+                            <div class="discount-item">
+                                <span class="discount-percentage">10%</span>
+                                <div class="discount-details">
+                                    <h4>Pagamento à Vista</h4>
+                                    <p>PIX, transferência ou cartão de débito</p>
+                                </div>
+                            </div>
+
+                            <div class="discount-item">
+                                <span class="discount-percentage">15%</span>
+                                <div class="discount-details">
+                                    <h4>Primeira Experiência</h4>
+                                    <p>Para quem nunca participou de retiros</p>
+                                </div>
+                            </div>
+
+                            <div class="discount-item">
+                                <span class="discount-percentage">20%</span>
+                                <div class="discount-details">
+                                    <h4>Grupos de 3+ pessoas</h4>
+                                    <p>Desconto aplicado para cada participante</p>
+                                </div>
+                            </div>
+
+                            <div class="discount-item">
+                                <span class="discount-percentage">25%</span>
+                                <div class="discount-details">
+                                    <h4>Retornantes</h4>
+                                    <p>Para quem já fez dois retiros conosco</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discount-note">
+                            <p><strong>⚠️ Importante:</strong> Descontos não são cumulativos. Aplicamos automaticamente o maior desconto disponível para seu perfil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custos Adicionais -->
+            <div class="additional-costs-section">
+                <h2>💰 Custos Adicionais Opcionais</h2>
+                <p class="section-intro">Nossos pacotes são completos, mas oferecemos alguns extras opcionais para personalizar sua experiência:</p>
+
+                <div class="costs-by-package">
+                    <div class="package-costs despertar-costs">
+                        <h3>🌅 Retiro Despertar - Extras</h3>
+                        <div class="costs-grid">
+                            <div class="cost-item">
+                                <h4>Quarto Individual</h4>
+                                <span class="cost-price">+R$ 150</span>
+                                <p>Privacidade total durante os 3 dias</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Transfer Executivo</h4>
+                                <span class="cost-price">+R$ 200</span>
+                                <p>Busca e retorno em veículo premium (até 100km)</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Massagem Relaxante</h4>
+                                <span class="cost-price">+R$ 120</span>
+                                <p>Sessão de 60min com terapeuta especializada</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Kit Gourmet</h4>
+                                <span class="cost-price">+R$ 80</span>
+                                <p>Produtos locais artesanais para levar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-costs conexao-costs">
+                        <h3>🌲 Retiro Conexão - Extras</h3>
+                        <div class="costs-grid">
+                            <div class="cost-item">
+                                <h4>Upgrade Quarto Premium</h4>
+                                <span class="cost-price">+R$ 300</span>
+                                <p>Suíte com varanda privativa e amenities</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Sessão de Coaching Extra</h4>
+                                <span class="cost-price">+R$ 200</span>
+                                <p>Sessão individual adicional de 90 minutos</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Workshop Privativo</h4>
+                                <span class="cost-price">+R$ 350</span>
+                                <p>Oficina personalizada em área de interesse</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Pacote Spa Completo</h4>
+                                <span class="cost-price">+R$ 400</span>
+                                <p>3 massagens + argila terapêutica + aromaterapia</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Trilha Privada Guiada</h4>
+                                <span class="cost-price">+R$ 250</span>
+                                <p>Expedição personalizada com guia exclusivo</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Transfer de Helicóptero</h4>
+                                <span class="cost-price">+R$ 800</span>
+                                <p>Chegada ou saída épica (até 200km)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-costs transformacao-costs">
+                        <h3>⛰️ Retiro Transformação - Extras Premium</h3>
+                        <div class="costs-grid">
+                            <div class="cost-item">
+                                <h4>Mentoria Intensiva</h4>
+                                <span class="cost-price">+R$ 1.200</span>
+                                <p>10 sessões adicionais de coaching ao longo de 6 meses</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Documentário Pessoal</h4>
+                                <span class="cost-price">+R$ 1.500</span>
+                                <p>Filmagem profissional da sua jornada + edição</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Projeto Permacultura Completo</h4>
+                                <span class="cost-price">+R$ 2.000</span>
+                                <p>Implementação de sistema na sua propriedade</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Retiro Familiar</h4>
+                                <span class="cost-price">+R$ 3.000</span>
+                                <p>Convite para cônjuge participar de 3 dias especiais</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Certificação Internacional</h4>
+                                <span class="cost-price">+R$ 800</span>
+                                <p>Certificado reconhecido internacionalmente</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Acesso VIP Vitalício</h4>
+                                <span class="cost-price">+R$ 5.000</span>
+                                <p>50% desconto em todos os futuros retiros + eventos exclusivos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cost-policies">
+                    <h3>📋 Políticas de Custos Extras</h3>
+                    <div class="policy-grid">
+                        <div class="policy-item">
+                            <h4>🕐 Quando Contratar</h4>
+                            <ul>
+                                <li>Extras podem ser contratados até 7 dias antes do retiro</li>
+                                <li>Alguns serviços podem ser adicionados durante o retiro (sujeito à disponibilidade)</li>
+                                <li>Transfer premium deve ser contratado com 15 dias de antecedência</li>
+                            </ul>
+                        </div>
+                        <div class="policy-item">
+                            <h4>💳 Pagamento de Extras</h4>
+                            <ul>
+                                <li>Pagamento separado do pacote principal</li>
+                                <li>À vista via PIX com 5% desconto</li>
+                                <li>Parcelamento em até 3x no cartão</li>
+                                <li>Pagamento no local apenas em dinheiro</li>
+                            </ul>
+                        </div>
+                        <div class="policy-item">
+                            <h4>🔄 Cancelamento</h4>
+                            <ul>
+                                <li>Extras podem ser cancelados até 48h antes sem cobrança</li>
+                                <li>Serviços de transfer: cancelamento até 7 dias antes</li>
+                                <li>Reembolso integral para cancelamentos válidos</li>
+                                <li>Reagendamento gratuito uma vez</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Garantias -->
+            <div class="guarantee-section">
+                <h2>🛡️ Nossas Garantias</h2>
+                <div class="guarantee-grid">
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">💯</div>
+                        <h3>Satisfação 100%</h3>
+                        <p>Se não ficar satisfeito nos primeiros 2 dias, devolvemos 100% do valor sem perguntas</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">🔒</div>
+                        <h3>Segurança Total</h3>
+                        <p>Equipe médica, seguro de vida e acidentes pessoais incluído para todos os participantes</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">📅</div>
+                        <h3>Flexibilidade</h3>
+                        <p>Reagendamento gratuito até 30 dias antes. Política de cancelamento flexível</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">🤝</div>
+                        <h3>Suporte Contínuo</h3>
+                        <p>Acompanhamento pós-retiro garantido e suporte da nossa equipe sempre que precisar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ sobre Pacotes -->
+            <div class="faq-section">
+                <h2>❓ Perguntas Frequentes sobre Pacotes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Qual pacote é melhor para mim?</h3>
+                        <p><strong>Despertar:</strong> Ideal para quem nunca fez um retiro e quer experimentar.<br>
+                        <strong>Conexão:</strong> Para quem busca uma experiência mais completa e transformação real.<br>
+                        <strong>Transformação:</strong> Para quem está pronto para mudança radical de vida.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Posso mudar de pacote depois da reserva?</h3>
+                        <p>Sim! Você pode fazer upgrade pagando apenas a diferença até 15 dias antes. Downgrade com reembolso da diferença até 30 dias antes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>O que acontece se eu não puder participar?</h3>
+                        <p>Temos política flexível: 100% reembolso até 30 dias antes, 70% até 15 dias antes, 40% até 7 dias antes. Reagendamento sempre gratuito.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Os pacotes têm limite de idade?</h3>
+                        <p>Recomendamos dos 50 aos 80 anos, mas avaliamos cada caso individualmente. O importante é ter mobilidade básica e disposição para novas experiências.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Preciso de equipamentos especiais?</h3>
+                        <p>Não! Fornecemos tudo que é necessário. Só pedimos que traga roupas confortáveis, tênis para caminhada e seus medicamentos pessoais.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Posso levar acompanhante?</h3>
+                        <p>Cônjuges e familiares podem participar reservando normalmente. Temos desconto especial para casais e grupos familiares.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div class="final-cta">
+                <div class="cta-content">
+                    <h2>Pronto para Transformar sua Vida?</h2>
+                    <p>Escolha o pacote ideal para você e comece sua jornada de reconexão hoje mesmo!</p>
+                    <div class="cta-buttons">
+                        <a href="despertar.html" class="cta-button">Começar Suave - Despertar</a>
+                        <a href="conexao.html" class="cta-button">Mais Procurado - Conexão</a>
+                        <a href="transformacao.html" class="cta-button">Transformação Total</a>
+                    </div>
+                    <p class="cta-note">💬 Tem dúvidas? <a href="#contato" style="text-decoration: none; color: rgb(248, 246, 94);">Fale conosco</a> - respondemos em até 2 horas!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌿 Retiro Bem-Estar</h3>
+                    <p>Transformando vidas através da conexão com a natureza e consigo mesmo.</p>
+                    <p>Uma nova perspectiva sobre a aposentadoria.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <a href="sobre.html">Nossa História</a>
+                    <a href="pacotes.html">Pacotes</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#blog">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>contato@retirobemestar.com.br</p>
+                    <p>(61) 99408-8445</p>
+                    <p>Feira de Santana, BA</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Siga-nos</h3>
+                    <a href="#facebook">Facebook</a>
+                    <a href="#instagram">Instagram</a>
+                    <a href="#youtube">YouTube</a>
+                    <a href="#newsletter">Newsletter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Retiro Bem-Estar. Todos os direitos reservados. | Desenvolvido por Alana Neves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app/script-js.js"></script>
+</body>
+</html>
