@@ -37,44 +37,6 @@ retiro-bem-estar/
 └── README.md           # Este arquivo
 ```
 
-## 💼 Pacotes Oferecidos
-
-### 🌅 Despertar (3 dias) - R$ 890
-**Público:** Iniciantes em retiros de bem-estar
-**Foco:** Relaxamento e autoconhecimento
-
-**Atividades:**
-- Caminhadas leves na natureza
-- Sessões de meditação guiada
-- Oficinas de artesanato terapêutico
-- Refeições orgânicas compartilhadas
-- Atividades em grupo para socialização
-
-### 🌲 Conexão (7 dias) - R$ 1.890
-**Público:** Pessoas buscando vínculos sociais mais profundos
-**Foco:** Imersão na natureza e relacionamentos
-
-**Atividades:**
-- Trilhas ecológicas moderadas
-- Yoga ao ar livre
-- Oficinas de culinária natural
-- Jardinagem terapêutica
-- Noites culturais e musicais
-- Workshop de fotografia da natureza
-
-### ⛰️ Transformação (14 dias) - R$ 3.490
-**Público:** Pessoas prontas para mudanças significativas no estilo de vida
-**Foco:** Transformação pessoal profunda
-
-**Atividades:**
-- Expedições guiadas na natureza
-- Práticas avançadas de mindfulness
-- Projetos de construção sustentável
-- Curso de permacultura
-- Círculos de partilha e desenvolvimento pessoal
-- Criação de projeto de vida pós-retiro
-- Acompanhamento pós-experiência (3 meses)
-
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
@@ -174,25 +136,3 @@ retiro-bem-estar/
 - Impacto ambiental positivo
 - Desenvolvimento de comunidades rurais
 - Preservação de áreas naturais
-
-## 👥 Equipe do Projeto
-
-**Desenvolvedor:** [Seu Nome]  
-**Curso:** Administração  
-**Instituição:** [Nome da Universidade]  
-**Orientador:** [Nome do Professor]  
-**Ano:** 2025
-
-## 📞 Contato
-
-- **Email:** contato@retirobemestar.com.br
-- **Telefone:** (11) 99999-9999
-- **Localização:** Serra da Mantiqueira, MG
-
-## 📄 Licença
-
-Este projeto foi desenvolvido como trabalho acadêmico e está disponível para fins educacionais.
-
----
-
-**Desenvolvido com 💚 para transformar a experiência da aposentadoria no Brasil**
